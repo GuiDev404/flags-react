@@ -1,0 +1,13 @@
+.flags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  gap: 2.3em 66px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 3em 0px;
+}
+
+.flags .no-results {
+  color: var(--black);
+  grid-column: span 2;
+}
