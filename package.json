@@ -1,12 +1,16 @@
 {
   "version": "0.0.0",
+  "homepage": "http://guidev404.github.io/flag-project-react",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "gh-pages": "^3.2.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-content-loader": "^6.0.3",
