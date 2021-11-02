@@ -6,7 +6,7 @@ const headers = {
 }
 
 const instance = axios.create({
-  baseURL: 'https://restcountries.eu/rest/v2/all',
+  baseURL: 'https://restcountries.com/v3.1/all',
   headers
 });
 

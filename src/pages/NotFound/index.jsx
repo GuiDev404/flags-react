@@ -1,6 +1,7 @@
 import React from 'react'
-import Button from '../components/Button'
-import imgFallback from '../not_found_fallback.jpg'
+import Button from '../../components/Button'
+import imgFallback from '../../not_found_fallback.jpg'
+import './styles.css'; 
 
 const NotFound = () => {
 

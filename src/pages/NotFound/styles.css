@@ -1,0 +1,26 @@
+.not-found {
+  color: var(--black);
+  padding-bottom: 10px;
+}
+
+.not-found .container {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  margin-top: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found .container .title {
+  writing-mode: vertical-rl;
+  font-size: clamp(3rem, 4vw, 5rem);
+  margin-right: 1em;
+}
+
+.not-found .container img {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  object-position: top; 
+}

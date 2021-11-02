@@ -3,17 +3,17 @@ import Flag from "../Flag";
 import PropTypes from 'prop-types'
 
 const index = ({ flags }) => {
- 
   return flags.map((country) => (
+
     <Flag
-      key={country.alpha2Code}
-      id={country.alpha2Code}
-      imgUrl={country.flag}
-      countryName={country.name}
+      key={country.cca2}
+      id={country.cca2}
+      imgUrl={country.flags?.svg || country.flags?.png}
+      countryName={country.name.common}
       info={[
         { name: "Population", value: country.population },
         { name: "Region", value: country.region },
-        { name: "Capital", value: country.capital },
+        { name: "Capital", value: country.capital?.[0] || '' },
       ]}
     />
   ));

@@ -8,7 +8,7 @@ import Header from '../components/Header'
 
 const Home = ({ flags_request }) => {
   const [search, setSearch] = useState('');
-
+  
   return (
     <>
       <Header>

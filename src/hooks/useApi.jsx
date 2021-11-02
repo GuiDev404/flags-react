@@ -13,7 +13,7 @@ export default function useApi(url = '') {
       .then(data=> setResponse(data))
       .catch(error=> setError(error))
       .finally(()=> setIsLoading(false))
-  }, [])
+  }, [url])
 
   return {
     response, 
