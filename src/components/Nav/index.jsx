@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styles.css'; 
 
+const setStorage = (key, data)=> window.localStorage.setItem(key, JSON.stringify(data));
+const getStorage = (key)=> JSON.parse(window.localStorage.getItem(key));
+
 const index = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(getStorage('theme'));
 
   const toggleTheme = ()=> {
     setDarkTheme(!darkTheme)
@@ -16,14 +19,21 @@ const index = () => {
   useEffect(() => {
     const mq = window.matchMedia('(prefers-color-scheme: dark)')
     mq.addEventListener('change', changeMedia)
-    setDarkTheme(mq.matches)
- 
+    
+    const isNullOrUndefined = [null, undefined].includes(darkTheme);
+
+    if(isNullOrUndefined){
+      setDarkTheme(mq.matches)
+    }
+
     return () => {
       mq.removeEventListener('change', changeMedia)
     }
   }, [])
 
   useEffect(()=> {
+    setStorage('theme', darkTheme);
+
     const currentTheme = darkTheme ? 'dark-theme' : 'light-theme';
     document.documentElement.setAttribute('theme', currentTheme);
   }, [darkTheme])

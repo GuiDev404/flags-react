@@ -79,7 +79,7 @@
   margin: 0 15px 15px 0;
   display: inline-flex;
   box-shadow: rgb(0 0 0 / 30%) 0px 2px 4px 0px;
-  color: #fff;
+  color: var(--color);
 }
 
 @media screen and (max-width: 1024px) {
